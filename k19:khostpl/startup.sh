@@ -4,7 +4,6 @@
 # -------------------------------------
 #instalacio / preparacio
 /opt/docker/install.sh && echo "Install Ok"
-
-# activar els serveis
-/usr/sbin/krb5kdc  && echo "krb5kdc Ok"
-/usr/sbin/kadmind -nofork && echo "kadmind  Ok"
+/usr/sbin/nslcd && echo "nslcd Ok"
+/usr/sbin/nscd && echo "nscd Ok"
+/bin/bash

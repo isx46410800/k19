@@ -4,4 +4,4 @@
 # -------------------------------------
 #instalacio / preparacio
 /opt/docker/install.sh && echo "Install Ok"
-/bin/bash -d
+/bin/bash
