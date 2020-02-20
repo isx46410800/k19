@@ -2,8 +2,11 @@
 # @edt ASIX M11 2019-2020
 # instal.lacio
 # -------------------------------------
+#configuracio client
 cp /opt/docker/krb5.conf /etc/krb5.conf
 
+#configuracio de pam
+cp /opt/docker/system-auth /etc/pam.d/system-auth
 # creacio usuaris locals amb passwd
 useradd local01
 useradd local02
