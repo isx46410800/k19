@@ -1,0 +1,7 @@
+hola.txt
+k19:khost
+k19:khostp
+k19:khostpl
+k19:kserver
+ldapserver19:group
+README.md
