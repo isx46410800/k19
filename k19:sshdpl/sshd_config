@@ -82,7 +82,7 @@ KerberosAuthentication yes
 #KerberosOrLocalPasswd yes
 KerberosTicketCleanup yes
 #KerberosGetAFSToken no
-KerberosUseKuserok yes
+#KerberosUseKuserok yes
 
 # GSSAPI options
 GSSAPIAuthentication yes

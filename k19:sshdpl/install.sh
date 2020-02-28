@@ -30,6 +30,7 @@ cp /opt/docker/nslcd.conf /etc/nslcd.conf
 cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
 cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
 cp /opt/docker/sshd_config /etc/ssh/sshd_config
+cp /opt/docker/ssh_config /etc/ssh/ssh_config
 
 #authconfig automatic de ldap y keberos
 bash /opt/docker/auth.sh
@@ -39,7 +40,7 @@ cp /opt/docker/krb5.conf /etc/krb5.conf
 
 #copia de claus ssh y ssh/kerberos
 /usr/bin/ssh-keygen -A
-kadmin -p pere -w kpere -q "ktadd -k /etc/krb5.keytab host/sshd.edt.org"
+kadmin -p pau -w kpau -q "ktadd -k /etc/krb5.keytab host/sshd.edt.org"
 
 #configuracio de pam
 #cp /opt/docker/system-auth /etc/pam.d/system-auth
