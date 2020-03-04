@@ -1,7 +1,7 @@
 version: "3"
 services:
   kserver:
-    image: edtasixm11/k19:kserver
+    image: isx46410800/k19:kserver
     container_name: kserver.edt.org
     hostname: kserver.edt.org
     ports:
@@ -11,7 +11,7 @@ services:
     networks:
       - mynet
   ldap:
-    image: edtasixm06/ldapserver19:latest
+    image: isx46410800/k19:ldapserver
     container_name: ldap.edt.org
     hostname: ldap.edt.org
     ports: 
@@ -19,7 +19,7 @@ services:
     networks:
       - mynet
   sshd:
-    image: edtasixm11/k19:sshd
+    image: isx46410800/k19:sshdpl
     container_name: sshd.edt.org
     hostname: sshd.edt.org
     ports:
