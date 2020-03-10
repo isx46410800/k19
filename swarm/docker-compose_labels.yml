@@ -3,19 +3,11 @@ services:
   hello:
     image: isx46410800/k19:hello
     deploy:
-      replicas: 3
+      replicas: 6
+      placement:
+        constraints: [node.labels.tipus == beta]
     ports:
     - "80:80"
-    networks:
-    - mynet
-  portainer:
-    image: portainer/portainer
-    ports:
-    - "9000:9000"
-    volumes:
-    - "/var/run/docker.sock:/var/run/docker.sock"
-    networks:
-    - mynet
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
@@ -25,7 +17,3 @@ services:
     deploy:
       placement:
         constraints: [node.role == manager]
-    networks:
-    - mynet
-networks:
-  mynet:

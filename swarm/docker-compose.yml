@@ -1,0 +1,17 @@
+version: "3"
+services:
+  hello:
+    image: isx46410800/k19:hello
+    deploy:
+      replicas: 6
+    ports:
+    - "80:80"
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+    - "8080:8080"
+    volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
